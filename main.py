@@ -13,15 +13,15 @@ def main():
 
     # 定义训练参数
     training_args = TrainingArguments(
-        output_dir='./results',
-        num_train_epochs=3,
-        per_device_train_batch_size=8,
-        per_device_eval_batch_size=8,
-        warmup_steps=500,
-        weight_decay=0.01,
-        logging_dir='./logs',
-        logging_steps=100,
-        gradient_accumulation_steps=4,  # 设置梯度累积步数
+        output_dir='./results',         # 输出目录
+        num_train_epochs=3,             # 训练轮数
+        per_device_train_batch_size=4,  # 训练
+        per_device_eval_batch_size=4,   # 测试
+        warmup_steps=500,               # 预热步数
+        weight_decay=0.01,              # 权重衰减系数
+        logging_dir='./logs',           # 日志路径
+        logging_steps=20,               # 日志间隔
+        gradient_accumulation_steps=4,  # 梯度累积步数
     )
 
     # 训练和评估模型
