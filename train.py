@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import torch
 from config import training_args
 from utils import VisualTrainer
+from visualize import visualize_position_embeddings
 
 
 def train_and_evaluate(model, tokenizer, dataset):
@@ -22,6 +23,9 @@ def train_and_evaluate(model, tokenizer, dataset):
     # 在测试集上评估模型
     eval_results = trainer.evaluate(eval_dataset=dataset['eval'])
     print(eval_results)
+
+    # 可视化位置编码
+    visualize_position_embeddings(model, tokenizer)
 
     # 可视化训练过程中的损失函数变化
     plt.figure(figsize=(10, 6))
