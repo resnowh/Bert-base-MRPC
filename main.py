@@ -11,7 +11,13 @@ def main():
     dataset = load_and_preprocess_dataset(tokenizer)
 
     # 训练和评估模型
-    train_and_evaluate(model, tokenizer, dataset)
+    while True:
+        try:
+            train_and_evaluate(model, tokenizer, dataset)
+            break  # 如果训练成功完成,跳出循环
+        except KeyboardInterrupt:
+            print("Training interrupted. Resuming from the latest checkpoint...")
+            continue  # 如果训练被中断,继续下一次循环
 
 
 if __name__ == '__main__':

@@ -13,14 +13,20 @@ def train_and_evaluate(model, tokenizer, dataset):
     # 定义训练参数
     training_args = TrainingArguments(
         output_dir='./results',  # 输出目录
-        num_train_epochs=3,  # 训练轮数
+        num_train_epochs=5,  # 训练轮数
         per_device_train_batch_size=4,  # 训练
         per_device_eval_batch_size=4,  # 测试
         warmup_steps=500,  # 预热步数
         weight_decay=0.01,  # 权重衰减系数
+        gradient_accumulation_steps=4,  # 梯度累积步数
+        # 导出日志
         logging_dir='./logs',  # 日志路径
         logging_steps=20,  # 日志间隔
-        gradient_accumulation_steps=4,  # 梯度累积步数
+        # 检查点
+        save_strategy='steps',  # 添加保存策略为每隔一定步数保存一次
+        save_steps=10,  # 每隔10步保存一次检查点
+        save_total_limit=5,  # 最多保存5个最新的检查点
+        load_best_model_at_end=False,  # 是否在训练结束时加载最佳模型（开启后需要保证eval_strategy和save_strategy保持一致）
     )
 
     # 初始化自定义的Trainer
@@ -31,7 +37,7 @@ def train_and_evaluate(model, tokenizer, dataset):
     )
 
     # 开始训练
-    trainer.train()
+    trainer.train(resume_from_checkpoint=True)
 
     # 在测试集上评估模型
     eval_results = trainer.evaluate(eval_dataset=dataset['eval'])
