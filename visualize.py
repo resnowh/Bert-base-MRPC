@@ -16,3 +16,22 @@ def visualize_position_embeddings(model, tokenizer, max_length=128):
     plt.tight_layout()
     plt.savefig('position_embeddings.png', dpi=300)
     plt.show()
+
+
+def plot_loss(train_loss_vals, train_steps, eval_loss_vals, eval_steps):
+    plt.figure(figsize=(10, 6))
+
+    # 绘制训练集loss
+    plt.plot(train_steps, train_loss_vals, label='Training Loss')
+
+    # 绘制验证集loss
+    plt.plot(eval_steps, eval_loss_vals, label='Validation Loss')
+
+    plt.xlabel('Step')
+    plt.ylabel('Loss')
+    plt.title('Training and Validation Loss')
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig('loss_curve.png', dpi=300)
+    plt.show()

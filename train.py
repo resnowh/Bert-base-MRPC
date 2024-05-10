@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import torch
 from config import training_args
 from utils import VisualTrainer
-from visualize import visualize_position_embeddings
+from visualize import visualize_position_embeddings, plot_loss
 
 
 def train_and_evaluate(model, tokenizer, dataset):
@@ -27,24 +27,14 @@ def train_and_evaluate(model, tokenizer, dataset):
     # 可视化位置编码
     visualize_position_embeddings(model, tokenizer)
 
-    # 可视化训练过程中的损失函数变化
-    plt.figure(figsize=(10, 6))
-
-    # 绘制训练集loss
+    # 提取训练和验证的loss值和步数
     train_loss_vals = [log['loss'] for log in trainer.state.log_history if 'loss' in log]
     train_steps = [log['step'] for log in trainer.state.log_history if 'loss' in log]
-    plt.plot(train_steps, train_loss_vals, label='Training Loss')
-
-    # 绘制验证集loss
     eval_loss_vals = [log['eval_loss'] for log in trainer.state.log_history if 'eval_loss' in log]
     eval_steps = [log['step'] for log in trainer.state.log_history if 'eval_loss' in log]
-    plt.plot(eval_steps, eval_loss_vals, label='Validation Loss')
 
-    plt.xlabel('Step')
-    plt.ylabel('Loss')
-    plt.title('Training Loss')
-    plt.grid(True)
-    plt.show()
+    # 可视化训练过程中的损失函数变化
+    plot_loss(train_loss_vals, train_steps, eval_loss_vals, eval_steps)
 
     # 保存模型
     trainer.save_model('./trained_model')
