@@ -1,12 +1,27 @@
 import matplotlib.pyplot as plt
 import torch
+from transformers import TrainingArguments
 
 from utils import VisualTrainer
 
-def train_and_evaluate(model, tokenizer, dataset, training_args):
+
+def train_and_evaluate(model, tokenizer, dataset):
     # 将模型移动到GPU上
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model.to(device)
+
+    # 定义训练参数
+    training_args = TrainingArguments(
+        output_dir='./results',  # 输出目录
+        num_train_epochs=3,  # 训练轮数
+        per_device_train_batch_size=4,  # 训练
+        per_device_eval_batch_size=4,  # 测试
+        warmup_steps=500,  # 预热步数
+        weight_decay=0.01,  # 权重衰减系数
+        logging_dir='./logs',  # 日志路径
+        logging_steps=20,  # 日志间隔
+        gradient_accumulation_steps=4,  # 梯度累积步数
+    )
 
     # 初始化自定义的Trainer
     trainer = VisualTrainer(
