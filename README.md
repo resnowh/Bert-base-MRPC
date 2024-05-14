@@ -2,6 +2,21 @@
 
 使用GLUE基准测试中的MRPC数据集, 训练bert-base-uncased模型.
 
+## Todo-List
+- [x] 可视化监控训练参数(TensorBoard)
+- [x] 实现训练从中断点继续
+- [x] 训练完成后绘制loos和位置编码图像
+- [x] 实现模型性能评估
+  - [x] 准确率、精确率、召回率、F1值和混淆矩阵
+- [ ] 修改bert模型的学习型位置编码，实现
+  - [ ] 学习型PE（默认）
+  - [ ] 绝对PE
+  - [ ] 相对PE
+  - [ ] RoPE
+  - [ ] NoPE
+- [ ] 使用不同数据集分别测试
+  - [ ] GLUE-MRPC（Microsoft Research Paraphrase Corpus）
+
 ## 实时可视化: 使用TensorBoard实现训练指标的实时可视化
 1. 安装TensorBoard: `pip install tensorboard`
 

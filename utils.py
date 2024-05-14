@@ -1,8 +1,6 @@
-from matplotlib import pyplot as plt
 from transformers import Trainer
 from torch.utils.tensorboard import SummaryWriter
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
-import seaborn as sns
 
 
 def compute_metrics(pred):
@@ -48,7 +46,7 @@ class VisualTrainer(Trainer):
         super().log(logs)
         for k, v in logs.items():
             if k == "loss":
-                # 将损失记录到 TensorBoard
+                # 将训练损失记录到 TensorBoard
                 self.writer.add_scalar("Loss/Train", v, self.state.global_step)
             elif k == "eval_loss":
                 # 将评估损失记录到 TensorBoard
