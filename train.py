@@ -1,3 +1,6 @@
+import os
+import shutil
+
 import matplotlib.pyplot as plt
 import torch
 from config import training_args
@@ -40,6 +43,11 @@ def train_and_evaluate(model, tokenizer, dataset):
     # 将模型移动到GPU上
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model.to(device)
+
+    # 删除已有的TensorBoard日志目录
+    log_dir = os.path.join(training_args.logging_dir, training_args.run_name)
+    if os.path.exists(log_dir):
+        shutil.rmtree(log_dir)
 
     # 训练模型
     trainer = train(model, tokenizer, dataset)

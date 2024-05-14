@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
-import numpy as np
 
 
 def visualize_position_embeddings(model, tokenizer, max_length=128):
