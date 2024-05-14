@@ -12,6 +12,8 @@ def main():
     # 根据配置文件中的关键字决定是否将位置编码转换为绝对位置编码
     if position_embedding_type == 'absolute':
         model = convert_to_absolute_position_embedding(model)
+    elif position_embedding_type == 'relative':
+        model = model
 
     # 加载和预处理数据集
     dataset = load_and_preprocess_dataset(tokenizer)

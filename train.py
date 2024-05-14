@@ -16,7 +16,7 @@ def train(model, tokenizer, dataset):
         eval_dataset=dataset['eval'],
         compute_metrics=compute_metrics
     )
-    trainer.train(resume_from_checkpoint=True)
+    trainer.train(resume_from_checkpoint=False)
     return trainer
 
 
