@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a002fab-6c93-48df-a219-225cccdd7fcf" name="更改" comment="添加了绝对位置编码，通过config配置文件中的position_embedding_type值来控制。&#10;修改了绘制loss的函数的名称，从plot_loss改为visual_loss">
+    <list default="true" id="e87b991e-4aaa-4d4c-9430-587a54660cde" name="更改" comment="Merge remote-tracking branch 'bert-base-PE/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;visualize.py">
+      <change afterPath="$PROJECT_DIR$/PE_rotary.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/absolute_PE.py" beforeDir="false" afterPath="$PROJECT_DIR$/PE_absolute.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/visualize.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualize.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,19 +26,12 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PUSH_TAGS">
-      <GitPushTagMode>
-        <option name="argument" value="--tags" />
-        <option name="title" value="All" />
-      </GitPushTagMode>
-    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="absolute-PE" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -50,9 +46,9 @@
   }
 }</component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
+  &quot;associatedIndex&quot;: 3
 }</component>
-  <component name="ProjectId" id="2g8PrEAWSNuIcczHSxGTnRBSinJ" />
+  <component name="ProjectId" id="2gRvn9zbdQg96NRLbdZ7zV3B8Mm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -65,13 +61,11 @@
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_function.executor&quot;: &quot;Run&quot;,
-    &quot;Python.train.executor&quot;: &quot;Run&quot;,
-    &quot;Python.visualize.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/Workspace/PythonProject/bert-base-PE&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
   <component name="RunManager" selected="Python.main">
@@ -146,8 +140,6 @@
         <item itemvalue="Python.main" />
         <item itemvalue="Python.visualize" />
         <item itemvalue="Python.test_function" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.visualize" />
       </list>
     </recent_temporary>
   </component>
@@ -158,178 +150,29 @@
       </set>
     </attachedChunks>
   </component>
-  <component name="ShelveChangesManager">
-    <option name="groupingKeys">
-      <option value="directory" />
-    </option>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
-      <changelist id="7a002fab-6c93-48df-a219-225cccdd7fcf" name="更改" comment="" />
-      <created>1715076428097</created>
+      <changelist id="e87b991e-4aaa-4d4c-9430-587a54660cde" name="更改" comment="添加了绝对位置编码，通过config配置文件中的position_embedding_type值来控制。&#10;修改了绘制loss的函数的名称，从plot_loss改为visual_loss" />
+      <created>1715673370261</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1715076428097</updated>
+      <updated>1715673370261</updated>
     </task>
-    <task id="LOCAL-00001" summary="使用GLUE基准测试中的MRPC数据集,训练bert-base模型">
+    <task id="LOCAL-00001" summary="Merge remote-tracking branch 'bert-base-PE/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;visualize.py">
       <option name="closed" value="true" />
-      <created>1715257840168</created>
+      <created>1715689450271</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1715257840168</updated>
+      <updated>1715689450271</updated>
     </task>
-    <task id="LOCAL-00002" summary="增加了visualize.py文件，以实现对位置编码的可视化">
-      <option name="closed" value="true" />
-      <created>1715333448088</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1715333448088</updated>
-    </task>
-    <task id="LOCAL-00003" summary="将绘制loss的功能移动到visualize.py，并且添加了测试">
-      <option name="closed" value="true" />
-      <created>1715337909857</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1715337909857</updated>
-    </task>
-    <task id="LOCAL-00004" summary="将绘制loss的功能移动到visualize.py，并且添加了测试">
-      <option name="closed" value="true" />
-      <created>1715340410891</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1715340410891</updated>
-    </task>
-    <task id="LOCAL-00005" summary="将绘制loss的功能移动到visualize.py，并且添加了测试">
-      <option name="closed" value="true" />
-      <created>1715342145088</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1715342145088</updated>
-    </task>
-    <task id="LOCAL-00006" summary="将绘制loss的功能移动到visualize.py，并且添加了测试">
-      <option name="closed" value="true" />
-      <created>1715343891991</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1715343891991</updated>
-    </task>
-    <task id="LOCAL-00007" summary="将绘制loss的功能移动到visualize.py，并且添加了测试">
-      <option name="closed" value="true" />
-      <created>1715343895851</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1715343895851</updated>
-    </task>
-    <task id="LOCAL-00008" summary="将绘制loss的功能移动到visualize.py，并且添加了测试">
-      <option name="closed" value="true" />
-      <created>1715343917926</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1715343917926</updated>
-    </task>
-    <task id="LOCAL-00009" summary="导入测试集并对模型准确率、精确率、召回率、F1值和混淆矩阵做测试。将测试和评估函数分开以提高模块化水平">
-      <option name="closed" value="true" />
-      <created>1715436439772</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1715436439772</updated>
-    </task>
-    <task id="LOCAL-00010" summary="导入测试集并对模型准确率、精确率、召回率、F1值和混淆矩阵做测试。将测试和评估函数分开以提高模块化水平">
-      <option name="closed" value="true" />
-      <created>1715518122723</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1715518122723</updated>
-    </task>
-    <task id="LOCAL-00011" summary="修正了日志输出逻辑，现在日志将按照开始训练的日期时间分别存储在对应的log文件夹下。在README里添加了TodoList。">
-      <option name="closed" value="true" />
-      <created>1715654981790</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1715654981790</updated>
-    </task>
-    <task id="LOCAL-00012" summary="修正了日志输出逻辑，现在日志将按照开始训练的日期时间分别存储在对应的log文件夹下。在README里添加了TodoList。">
-      <option name="closed" value="true" />
-      <created>1715665176000</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1715665176000</updated>
-    </task>
-    <task id="LOCAL-00013" summary="添加了绝对位置编码，通过config配置文件中的position_embedding_type值来控制。&#10;修改了绘制loss的函数的名称，从plot_loss改为visual_loss">
-      <option name="closed" value="true" />
-      <created>1715668598452</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1715668598453</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="User">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="*" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ID_WIDTH">
-                <map>
-                  <entry key="Table.Default.Author.ColumnIdWidth" value="15" />
-                  <entry key="Table.Default.Date.ColumnIdWidth" value="126" />
-                </map>
-              </option>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="bert-base-PE/master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="使用GLUE基准测试中的MRPC数据集,训练bert-base模型" />
-    <MESSAGE value="增加了visualize.py文件，以实现对位置编码的可视化" />
-    <MESSAGE value="将绘制loss的功能移动到visualize.py，并且添加了测试" />
-    <MESSAGE value="导入测试集并对模型准确率、精确率、召回率、F1值和混淆矩阵做测试。将测试和评估函数分开以提高模块化水平" />
-    <MESSAGE value="修正了日志输出逻辑，现在日志将按照开始训练的日期时间分别存储在对应的log文件夹下。在README里添加了TodoList。" />
     <MESSAGE value="添加了绝对位置编码，通过config配置文件中的position_embedding_type值来控制。&#10;修改了绘制loss的函数的名称，从plot_loss改为visual_loss" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加了绝对位置编码，通过config配置文件中的position_embedding_type值来控制。&#10;修改了绘制loss的函数的名称，从plot_loss改为visual_loss" />
+    <MESSAGE value="Merge remote-tracking branch 'bert-base-PE/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;visualize.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'bert-base-PE/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;visualize.py" />
   </component>
 </project>
