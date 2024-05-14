@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import torch
 from config import training_args
 from utils import VisualTrainer, compute_metrics
-from visualize import visualize_position_embeddings, plot_loss
+from visualize import visualize_position_embeddings, visualize_loss
 
 
 def train(model, tokenizer, dataset):
@@ -36,7 +36,7 @@ def evaluate(model, tokenizer, dataset, trainer):
     eval_steps = [log['step'] for log in trainer.state.log_history if 'eval_loss' in log]
 
     # 可视化训练过程中的损失函数变化
-    plot_loss(train_loss_vals, train_steps, eval_loss_vals, eval_steps)
+    visualize_loss(train_loss_vals, train_steps, eval_loss_vals, eval_steps)
 
 
 def train_and_evaluate(model, tokenizer, dataset):

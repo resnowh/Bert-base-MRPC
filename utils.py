@@ -53,4 +53,3 @@ class VisualTrainer(Trainer):
             elif k == "eval_loss":
                 # 将评估损失记录到 TensorBoard
                 self.writer.add_scalar("Loss/Eval", v, self.state.global_step)
-
