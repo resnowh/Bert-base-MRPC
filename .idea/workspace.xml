@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e87b991e-4aaa-4d4c-9430-587a54660cde" name="更改" comment="Merge remote-tracking branch 'bert-base-PE/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;visualize.py">
+    <list default="true" id="e87b991e-4aaa-4d4c-9430-587a54660cde" name="更改" comment="将转换位置编码的模块移动到model.py中">
       <change afterPath="$PROJECT_DIR$/PE_rotary.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/absolute_PE.py" beforeDir="false" afterPath="$PROJECT_DIR$/PE_absolute.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PE_absolute.py" beforeDir="false" afterPath="$PROJECT_DIR$/PE_absolute.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualize.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualize.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,12 +166,21 @@
       <option name="project" value="LOCAL" />
       <updated>1715689450271</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="将转换位置编码的模块移动到model.py中">
+      <option name="closed" value="true" />
+      <created>1715700876731</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715700876731</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加了绝对位置编码，通过config配置文件中的position_embedding_type值来控制。&#10;修改了绘制loss的函数的名称，从plot_loss改为visual_loss" />
     <MESSAGE value="Merge remote-tracking branch 'bert-base-PE/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;visualize.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'bert-base-PE/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;visualize.py" />
+    <MESSAGE value="将转换位置编码的模块移动到model.py中" />
+    <option name="LAST_COMMIT_MESSAGE" value="将转换位置编码的模块移动到model.py中" />
   </component>
 </project>

@@ -12,10 +12,12 @@
   - [x] 学习的relative_PE（默认）
   - [x] absolute_PE
   - [ ] relative_PE
-  - [ ] RoPE
+  - [x] RoPE
   - [ ] NoPE
 - [ ] 使用不同数据集分别测试
-  - [ ] GLUE-MRPC（Microsoft Research Paraphrase Corpus）
+  - [x] GLUE-MRPC（Microsoft Research Paraphrase Corpus）
+  - [ ] 2
+  - [ ] 3
 
 ## 实时可视化: 使用TensorBoard实现训练指标的实时可视化
 1. 安装TensorBoard: `pip install tensorboard`

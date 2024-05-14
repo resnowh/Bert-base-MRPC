@@ -1,5 +1,6 @@
 from transformers import BertTokenizer, BertForSequenceClassification
 from PE_absolute import convert_to_absolute_position_embedding
+from PE_rotary import convert_to_rotary_position_embedding
 from config import position_embedding_type
 
 
@@ -13,8 +14,8 @@ def load_model_and_tokenizer():
         model = convert_to_absolute_position_embedding(model)
 
     # 旋转位置编码
-    # elif position_embedding_type == 'rotary':
-    #     model = convert_to_rotary_position_embedding(model)
+    elif position_embedding_type == 'rotary':
+        model = convert_to_rotary_position_embedding(model)
 
     # 相对位置编码（学习的）
     elif position_embedding_type == 'relative':
