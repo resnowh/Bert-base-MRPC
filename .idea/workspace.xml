@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a002fab-6c93-48df-a219-225cccdd7fcf" name="更改" comment="修正了日志输出逻辑，现在日志将按照开始训练的日期时间分别存储在对应的log文件夹下。在README里添加了TodoList。">
+    <list default="true" id="7a002fab-6c93-48df-a219-225cccdd7fcf" name="更改" comment="添加了绝对位置编码，通过config配置文件中的position_embedding_type值来控制。&#10;修改了绘制loss的函数的名称，从plot_loss改为visual_loss">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/visualize.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualize.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,19 +61,19 @@
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python.main.executor": "Run",
-    "Python.test_function.executor": "Run",
-    "Python.train.executor": "Run",
-    "Python.visualize.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_function.executor&quot;: &quot;Run&quot;,
+    &quot;Python.train.executor&quot;: &quot;Run&quot;,
+    &quot;Python.visualize.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bert-base-PE" />
@@ -261,7 +260,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715654981790</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="修正了日志输出逻辑，现在日志将按照开始训练的日期时间分别存储在对应的log文件夹下。在README里添加了TodoList。">
+      <option name="closed" value="true" />
+      <created>1715665176000</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1715665176000</updated>
+    </task>
+    <task id="LOCAL-00013" summary="添加了绝对位置编码，通过config配置文件中的position_embedding_type值来控制。&#10;修改了绘制loss的函数的名称，从plot_loss改为visual_loss">
+      <option name="closed" value="true" />
+      <created>1715668598452</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1715668598453</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -314,6 +329,7 @@
     <MESSAGE value="将绘制loss的功能移动到visualize.py，并且添加了测试" />
     <MESSAGE value="导入测试集并对模型准确率、精确率、召回率、F1值和混淆矩阵做测试。将测试和评估函数分开以提高模块化水平" />
     <MESSAGE value="修正了日志输出逻辑，现在日志将按照开始训练的日期时间分别存储在对应的log文件夹下。在README里添加了TodoList。" />
-    <option name="LAST_COMMIT_MESSAGE" value="修正了日志输出逻辑，现在日志将按照开始训练的日期时间分别存储在对应的log文件夹下。在README里添加了TodoList。" />
+    <MESSAGE value="添加了绝对位置编码，通过config配置文件中的position_embedding_type值来控制。&#10;修改了绘制loss的函数的名称，从plot_loss改为visual_loss" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加了绝对位置编码，通过config配置文件中的position_embedding_type值来控制。&#10;修改了绘制loss的函数的名称，从plot_loss改为visual_loss" />
   </component>
 </project>

@@ -1,4 +1,4 @@
-from visualize import plot_loss
+from visualize import visualize_loss
 
 
 def test_plot_loss():
@@ -8,7 +8,7 @@ def test_plot_loss():
     eval_steps = [100, 200, 300, 400, 500]
 
     # 调用 plot_loss 函数进行测试
-    plot_loss(train_loss_vals, train_steps, eval_loss_vals, eval_steps)
+    visualize_loss(train_loss_vals, train_steps, eval_loss_vals, eval_steps)
 
 
 # 测试plot_loss()

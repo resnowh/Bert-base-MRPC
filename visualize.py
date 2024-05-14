@@ -1,3 +1,5 @@
+import os
+
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -13,11 +15,12 @@ def visualize_position_embeddings(model, tokenizer, max_length=128):
     plt.xlabel('Embedding Dimension')
     plt.ylabel('Position')
     plt.tight_layout()
-    plt.savefig('position_embeddings.png', dpi=300)
-    plt.show()
+    os.makedirs('./output', exist_ok=True)
+    plt.savefig(os.path.join('./output', 'position_embeddings.png'), dpi=300)
+    # plt.show()
 
 
-def plot_loss(train_loss_vals, train_steps, eval_loss_vals, eval_steps):
+def visualize_loss(train_loss_vals, train_steps, eval_loss_vals, eval_steps):
     plt.figure(figsize=(10, 6))
 
     # 绘制训练集loss
@@ -32,5 +35,6 @@ def plot_loss(train_loss_vals, train_steps, eval_loss_vals, eval_steps):
     plt.legend()
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig('loss_curve.png', dpi=300)
-    plt.show()
+    os.makedirs('./output', exist_ok=True)
+    plt.savefig(os.path.join('./output', 'loss_curve.png'), dpi=300)
+    # plt.show()
