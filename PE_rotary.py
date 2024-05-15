@@ -121,4 +121,7 @@ def convert_to_rotary_position_embedding(model):
 
     model.bert.encoder.forward = new_forward.__get__(model.bert.encoder, model.bert.encoder.__class__)
 
+    # 冻结位置编码权重,确保在训练过程中不会被更新
+    model.bert.embeddings.position_embeddings.weight.requires_grad = False
+
     return model

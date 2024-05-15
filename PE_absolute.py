@@ -20,4 +20,7 @@ def convert_to_absolute_position_embedding(model, max_length=512, embedding_dim=
     # 将绝对位置编码复制到模型的位置编码中
     model.bert.embeddings.position_embeddings.weight.data.copy_(absolute_position_embedding)
 
+    # 冻结位置编码权重,确保在训练过程中不会被更新
+    model.bert.embeddings.position_embeddings.weight.requires_grad = False
+
     return model

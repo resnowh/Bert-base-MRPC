@@ -5,7 +5,7 @@ from datetime import datetime
 current_time = datetime.now().strftime("%Y%m%d-%H%M%S")
 
 # 用于控制位置编码方式
-position_embedding_type = 'absolute'  # 可选值: 'absolute', 'relative', 'rotary'
+position_embedding_type = 'none'  # 可选值: 'absolute', 'default', 'rotary', 'none'
 
 # 定义训练参数
 training_args = TrainingArguments(
