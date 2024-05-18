@@ -19,7 +19,14 @@
   - [ ] 2
   - [ ] 3
 
-## 实时可视化: 使用TensorBoard实现训练指标的实时可视化
+## 采用多种位置编码训练模型
+1. 查看config.py，修改 `position_embedding_type`来采用不同的位置编码
+2. 允许的取值为：`default`,`none`,`absolute`,`rotay`
+3. 分别对应编码：默认（学习的相对位置编码），空位置编码，绝对位置编码（三角的），旋转位置编码
+
+## 可视化: 使用TensorBoard可视化对比训练指标
+使用streamlit实现的内嵌TensorBoard: `streamlit run board.py`
+
 1. 安装TensorBoard: `pip install tensorboard`
 
 2. 配置TrainingArguments: 
