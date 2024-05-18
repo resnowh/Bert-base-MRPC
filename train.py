@@ -14,6 +14,7 @@ def train(model, tokenizer, dataset):
         args=training_args,
         train_dataset=dataset['train'],
         eval_dataset=dataset['eval'],
+        tokenizer=tokenizer,
         compute_metrics=compute_metrics
     )
     trainer.train(resume_from_checkpoint=False)

@@ -13,7 +13,7 @@
   - [x] absolute_PE
   - [ ] relative_PE
   - [x] RoPE
-  - [ ] NoPE
+  - [x] NoPE
 - [ ] 使用不同数据集分别测试
   - [x] GLUE-MRPC（Microsoft Research Paraphrase Corpus）
   - [ ] 2
