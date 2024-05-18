@@ -3,9 +3,10 @@ from datetime import datetime
 
 # 生成当前时间的字符串表示作为唯一标识符
 current_time = datetime.now().strftime("%Y%m%d-%H%M%S")
-
 # 用于控制位置编码方式
-position_embedding_type = 'none'  # 可选值: 'absolute', 'default', 'rotary', 'none'
+position_embedding_type = 'relative'    # 可选值: 'absolute', 'default', 'rotary', 'none', 'relative'
+# 用于控制是否从检查点恢复训练
+is_resume_from_checkpoint = False       # 可选值：True, False
 
 # 定义训练参数
 training_args = TrainingArguments(
@@ -13,10 +14,10 @@ training_args = TrainingArguments(
     num_train_epochs=4,  # 训练轮数
     per_device_train_batch_size=4,  # 训练批次大小
     per_device_eval_batch_size=4,  # 测试批次大小
-    warmup_steps=40,  # 预热步数
+    warmup_steps=100,  # 预热步数
     learning_rate=2e-5,  # 学习率
-    weight_decay=0.01,  # 权重衰减系数
-    gradient_accumulation_steps=8,  # 梯度累积步数
+    weight_decay=0.05,  # 权重衰减系数
+    gradient_accumulation_steps=4,  # 梯度累积步数
     # 导出日志
     logging_dir=f'./logs/{current_time}-{position_embedding_type}/',  # 日志路径
     logging_steps=20,  # 日志间隔

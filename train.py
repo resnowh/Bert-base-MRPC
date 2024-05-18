@@ -1,9 +1,7 @@
 import os
 import shutil
-
-import matplotlib.pyplot as plt
 import torch
-from config import training_args
+from config import training_args, is_resume_from_checkpoint
 from utils import VisualTrainer, compute_metrics
 from visualize import visualize_position_embeddings, visualize_loss
 
@@ -17,7 +15,7 @@ def train(model, tokenizer, dataset):
         tokenizer=tokenizer,
         compute_metrics=compute_metrics
     )
-    trainer.train(resume_from_checkpoint=False)
+    trainer.train(resume_from_checkpoint=is_resume_from_checkpoint)
     return trainer
 
 
