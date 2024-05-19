@@ -4,7 +4,7 @@ from datetime import datetime
 # 生成当前时间的字符串表示作为唯一标识符
 current_time = datetime.now().strftime("%Y%m%d-%H%M%S")
 # 用于控制位置编码方式
-position_embedding_type = 'relative'    # 可选值: 'absolute', 'default', 'rotary', 'none', 'relative'
+position_embedding_type = 'sinusoidal'    # 可选值: 'absolute', 'relative_key', 'relative_key_query', 'rotary', 'none', 'sinusoidal'
 # 用于控制是否从检查点恢复训练
 is_resume_from_checkpoint = False       # 可选值：True, False
 
